@@ -4,4 +4,14 @@
 
 .btn-margin-top {
     margin-top: 25px;
+    width: 20%;
+}
+
+.margin-bot {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    width: 20%;
+    margin-left: 40%;
 }

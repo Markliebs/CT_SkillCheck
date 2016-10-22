@@ -20,17 +20,28 @@
 
     <body>
 
-<div class = "jumbotron">
-<div class= "centered">
+<div class ="jumbotron">
+<div class ="centered">
 
+<div class ="margin-bot">
 <h1><b>Product Form</b></h1>
+</div>
 
 {!! Form::open(['url' => '/products', 'files' => true]) !!}
-{!! Form::text('productName', '', ['placeholder' => 'Product Name']) !!}<br>
-{!! Form::text('quantityinStock', '', ['placeholder' => 'Quantity in Stock']) !!}<br>
-{!! Form::text('priceperItem', '', ['placeholder' => 'Price Per Item']) !!}<br>
-{!! Form::submit('Submit', array('class' => 'btn btn-success btn-margin-top')) !!}
 
+<div class="form-group">
+{!! Form::label('productName', 'Product Name:') !!}
+{!! Form::text('productName', null, array('class' => 'form-control')) !!}
+</div>
+<div class="form-group">
+{!! Form::label('quantityinStock', 'Quantity:') !!}
+{!! Form::text('quantityinStock', null, array('class' => 'form-control')) !!}
+</div>
+<div class="form-group">
+{!! Form::label('priceperItem', 'Price Per Item:') !!}
+{!! Form::text('priceperItem', null, array('class' => 'form-control')) !!}
+</div>
+{!! Form::submit('Submit', array('class' => 'btn btn-success btn-margin-top')) !!}
 {!! Form::close() !!}
 
 </div>
