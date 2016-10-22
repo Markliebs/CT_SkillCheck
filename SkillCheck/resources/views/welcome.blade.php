@@ -5,91 +5,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Skill Check!</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+            <link rel="stylesheet" href="/css/reset.css" type="text/css">
+            <link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+            <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-            .full-height {
-                height: 100vh;
-            }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
+
+
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+<div class = "jumbotron">
+<div class= "centered">
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+<h1><b>Product Form</b></h1>
+
+{!! Form::open(['url' => '/products', 'files' => true]) !!}
+{!! Form::text('productName', '', ['placeholder' => 'Product Name']) !!}<br>
+{!! Form::text('quantityinStock', '', ['placeholder' => 'Quantity in Stock']) !!}<br>
+{!! Form::text('priceperItem', '', ['placeholder' => 'Price Per Item']) !!}<br>
+{!! Form::submit('Submit', array('class' => 'btn btn-success btn-margin-top')) !!}
+
+{!! Form::close() !!}
+
+</div>
+</div>
+
+</body>
 </html>
+
+
+
+
+{{-- 
+Create a webpage with a form that has the following text input fields: Product name, Quantity in stock, Price per item.
+
+The submitted data of the form should be saved in an XML / JSON file with valid XML / JSON syntax.
+Underneath of the form, the web page should display all of the data which has been submitted in rows ordered by date time submitted, the order of the data columns should be: Product name, Quantity in stock, Price per item, Datetime submitted, Total value number.
+The "Total value number" should be calculated as (Quantity in stock * Price per item).
+The last row should how a sum total of all of the Total Value numbers.
+For extra credit, include functionality to edit each line. --}}
