@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 class formcontroller extends Controller
-// {
-    
+{
+    //
 }
 
 	public function create(Request $request){
@@ -19,5 +19,11 @@ class formcontroller extends Controller
 				
 		return view('home', compact('products'));
 		
+	}
+
+
+    	public function show(Request $request)
+	{
+		return view('products', compact('products'));
 	}
 
