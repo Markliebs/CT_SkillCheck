@@ -28,7 +28,7 @@
 				<h1><b>Product Form</b></h1>
 			</div>
 
-			{!! Form::open(['url' => '/products', 'files' => true]) !!}
+				{!! Form::open(['url' => '/products', 'files' => true]) !!}
 
 			<div class="form-group">
 				{!! Form::label('productName', 'Product Name:') !!} {!! Form::text('productName', null, array('class' => 'form-control'))
