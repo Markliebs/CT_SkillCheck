@@ -42,9 +42,8 @@
 				{!! Form::label('priceperItem', 'Price Per Item:') !!} {!! Form::text('priceperItem', null, array('class' => 'form-control'))
 				!!}
 			</div>
-			{!! Form::submit('Submit', array('class' => 'btn btn-success btn-margin-top')) !!} {!! Form::close() !!}
-
-		</div>
+				{!! Form::submit('Submit', array('class' => 'btn btn-success btn-margin-top')) !!} {!! Form::close() !!}
+			</div>
 	</div>
 
 </body>
